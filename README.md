@@ -8,6 +8,12 @@ Aus diesem Grund ist es auch sinnvoll, unsere verwendeten Assets untereinander z
 Unter `community_assets` befinden sich deswegen einige Assets, die von der Community entworfen wurden. Einige davon sind noch Platzhalter oder Work in Progress, wenn ihr also eine künstlerische Begabung und etwas Lust habt, *fühlt euch dazu eingeladen, diese zu verbessern, abzuwandeln oder daran herumzuprobieren*.  
 Wenn ihr Assets teilen wollt und nicht wisst wie, meldet euch am besten im Discord-Channel (siehe unten).
 
+## Projekte
+Einige der Projekte dieser Challenge werden öffentlich entwickelt und können auch direkt ausprobiert werden (Achtung: Work in Progress), hier einige davon:
+* Agent-Jack ([Quellcode](https://github.com/Capevace/Agent-Jack) / [ausprobieren](http://capevace.github.io/Agent-Jack/JackDanger/)) von Capevace und LeNerd
+* PacJack ([Quellcode](https://github.com/zhedar/GPPCC8-PacJack) / [ausprobieren](http://zhedar.github.io/GPPCC8-PacJack/)) von Zhedar
+
+
 ## Regeln
 Damit alles möglichst reibungsfrei abläuft, musst du ein paar Regeln einhalten.  
 Du siehst folgende Ordner:  
