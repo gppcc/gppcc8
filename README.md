@@ -60,7 +60,7 @@ Das heißt natürlich nicht, dass du bei JUMP auch springen musst^^
 Die heißen einfach so.
 
 #### Abgabe
-Schicke deinen gezippten Ordner an lets-gamedev@gmx.de
+Schicke deinen gezippten Ordner an letsgamedev@gmx.de
 
 #### Links
 * [Ankündigungs-Video](https://www.youtube.com/watch?v=0qZz1ciRj9s)
