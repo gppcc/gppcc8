@@ -1,8 +1,8 @@
-Hallo!
-Herzlichwillkommen zu Achten Game++ Community Challenge!
+﻿Hallo!
+Herzlich willkommen zur achten Game++ Community Challenge!
 
-Dies ist ein ganz besonderes Projekt, wenn nun arbeiten
-viele Leute an einem Projekt. Und damit alles möglichst 
+Dies ist ein ganz besonderes Projekt, denn nun arbeiten
+viele Leute an einem Projekt. Und damit alles möglichst
 reibungsfrei abläuft musst du ein paar Regeln einhalten.
 
 Du siehst folgende Ordner:
@@ -10,22 +10,22 @@ assets
 games
 js
 
-Du darfst im assets und im js ordner NICHTS verändern.
-ansehen darfst du dir die natürlich!
+Du darfst im assets und im js Ordner NICHTS verändern.
+Ansehen darfst du dir die natürlich!
 
-dein spiel packst du bitte da hin:
+Dein Spiel packst du bitte da hin:
 games/mygame/blabla
 
-Du kannst im Grunde den mygame ordner umbenennen zu deinem
-titel. Am Ende landen alle diese Ordner nämlich zusammen
-und da dürfen dann nicht 10 mygame ordner vorhanden sein^^
+Du kannst im Grunde den mygame Ordner umbenennen - zu deinem
+Titel. Am Ende landen alle diese Ordner nämlich zusammen
+und da dürfen dann nicht 10 mygame Ordner vorhanden sein^^
 
-innerhalb des mygame ordners findest du die game.js.
+Innerhalb des mygame Ordners findest du die game.js.
 
-darin wirst du dein Spiel entwickeln.
-bitte schribe deinen gesamten Code in diese Datei!
+Darin wirst du dein Spiel entwickeln.
+Bitte schreibe deinen gesamten Code in diese Datei!
 
-Falls du echt viel Code schreibst, kannst du, wärend
+Falls du echt viel Code schreibst, kannst du, während
 du entwickelst natürlich alles in verschiedenen Dateien
 verteilen. Wenn du dein Spiel aber zu mir schickst,
 dann möchte ich, dass es nur eine .js gibt!
@@ -36,12 +36,12 @@ Innerhalb der game.js sind noch einige Anweisungen wie
 du mit der Datei umgehen musst.
 
 Dieses Framework wird sich sicher in den nächsten
-Wochen ändern, also besser werden. Weil ich sicher
+Wochen ändern, also besser werden, weil ich sicher
 nicht an alles gedacht habe.
 
-Wenn es eine neue Version dieses Frameworks gibt sage
+Wenn es eine neue Version dieses Frameworks gibt, sage
 ich dir bescheid:
-Twitter: @letsgamedev
+Twitter:@letsgamedev
 Facebook: https://www.facebook.com/LetsGameDev/
 Oder in den Livestreams auf YouTube
 
@@ -51,7 +51,7 @@ Tom
 PS:
 
 Hier kurz mal wie du mit der GamePad Klasse umzugehen hast.
-In der game.js hast du ein paar beispiele für die Richtungs
+In der game.js hast du ein paar Beispiele für die Richtungs
 tasten. Insgesamt gibt es:
 UP
 DOWN

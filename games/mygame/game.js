@@ -1,9 +1,9 @@
 /*
 Hallo!
-Das hir ist deine Spielevorlage!
+Das hier ist deine Spielevorlage!
 Ich hoffe, ich habe alles gut genug dokumentiert.
 
-Alles was hier MyGame heißt musst du umbennen in etwas sehr
+Alles was hier MyGame heißt musst du umbenennen in etwas sehr
 individuelles. So wie KotzeMannGRKDM
 Die wirren Buchstaben können wichtig sein, falls jemand anderes
 auch KotzeMann entwickelt!
@@ -14,16 +14,16 @@ Wenn dein Spiel geschafft ist, dann rufe
 
 onVictory();
 
-auf! Später wird da dann ein richtiger Gewonnenbildschrim erscheinen!
+auf! Später wird da dann ein richtiger Gewonnen-Bildschrim erscheinen!
 
-Wenn man in deinem Spiel verliert dann rufe
+Wenn man in deinem Spiel verliert, dann rufe
 
-onLose()
+onLose();
 
-auf, dardurch wird dein Spiel neugestartet.
+auf. Dardurch wird dein Spiel neugestartet.
 
-Wärend du an deinem Spiel arbeitest, arbeite ich am Drumherum.
-So dass es dann alles auch supi aussieht!
+Während du an deinem Spiel arbeitest, arbeite ich am Drumherum,
+sodass es dann alles auch supi aussieht!
 */
 
 JackDanger.MyGame = function() {
@@ -41,7 +41,7 @@ JackDanger.MyGame.prototype.init = function() {
 
 JackDanger.MyGame.prototype.preload = function() {
 	this.load.path = 'games/' + currentGameData.id + '/assets/';//nicht anfassen
-
+	
     //füge hie rein was du alles laden musst.
     this.load.atlas("mygame");
 }
@@ -66,7 +66,7 @@ JackDanger.MyGame.prototype.update = function() {
 }
 
 /////////////////////////////////////////////////////////
-// Zeug das zum Spiel gehört, das kannst du alles ///////
+// Zeug das zum Spiel gehört, das kannst du alles /////// 
 // Löschen oder ändern oder was weiß ich ////////////////
 /////////////////////////////////////////////////////////
 
