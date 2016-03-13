@@ -6,12 +6,15 @@ Dies ist ein ganz besonderes Projekt, denn nun arbeiten viele Leute an einem Pro
 ## Assets
 Aus diesem Grund ist es auch sinnvoll, unsere verwendeten Assets untereinander zu teilen.  
 Unter `community_assets` befinden sich deswegen einige Assets, die von der Community entworfen wurden. Einige davon sind noch Platzhalter oder Work in Progress, wenn ihr also eine künstlerische Begabung und etwas Lust habt, *fühlt euch dazu eingeladen, diese zu verbessern, abzuwandeln oder daran herumzuprobieren*.  
+Da sich diese Liste ständig ändert, empfielt sich ein Blick in die verschiedenen Spiele-Repos.  
 Wenn ihr Assets teilen wollt und nicht wisst wie, meldet euch am besten im Discord-Channel (siehe unten).
 
 ## Projekte
 Einige der Projekte dieser Challenge werden öffentlich entwickelt und können auch direkt ausprobiert werden (Achtung: Work in Progress), hier einige davon:
 * Agent-Jack ([Quellcode](https://github.com/Capevace/Agent-Jack) / [ausprobieren](http://capevace.github.io/Agent-Jack/JackDanger/)) von Capevace und LeNerd
+* BomberJack ([Quellcode / ausprobieren](https://arenjames.itch.io/bomberjack)) von Aren James
 * JackDangerBike  ([Quellcode](https://github.com/MarcoFriedrichs/JackDangerBike/) / [ausprobieren](http://marcofriedrichs.github.io/JackDangerBike/)) von Marco
+* JackDanger-ZombieInvasion ([Quellcode](https://github.com/b7even/JackDanger-ZombieInvasion) / [ausprobieren](http://b7even.github.io/JackDanger-ZombieInvasion/)) von b7even
 * JackRun ([Quellcode](https://github.com/karlcosta/jackrun) / [ausprobieren](https://karlcosta.github.io/jackrun/)) von karlcosta
 * Jack The Runner ([Quellcode](https://github.com/fixxiefixx/fixxiefixx.github.io) / [ausprobieren](https://fixxiefixx.github.io/JackDanger/)) von fixxiefixx
 * PacJack ([Quellcode](https://github.com/zhedar/GPPCC8-PacJack) / [ausprobieren](http://zhedar.github.io/GPPCC8-PacJack/)) von Zhedar
