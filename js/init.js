@@ -2,12 +2,15 @@ var game = null;
 var games = [];
 var currentGameData = null;
 var finishedGames = [];
-function addMyGame(id, name, developerName, tutorialText, className) {
+function addMyGame(id, name, developerName, tutorialText, cursorText, jumpText, shootText, className) {
     games.push({
         id:id,
         name: name,
         developerName: developerName,
         tutorialText: tutorialText,
+        cursorText: cursorText,
+        jumpText: jumpText,
+        shootText: shootText,
         className: className
     });
     
@@ -21,7 +24,7 @@ function startRandomGame() {
     } else {
         var id = currentGameData.id;
         finishedGames.push(games.splice(rndNr,1));
-        game.state.start(id);
+        game.state.start(id, true, false);
     }
     
     
@@ -29,12 +32,12 @@ function startRandomGame() {
 }
 
 var loadingscreen = null;
-function addLoadingScreen(game) {
-    game.load.onFileComplete.add(function( progress ) {
-        console.log("progress: " + progress);
-    });
-    loadingscreen = new JackDanger.LoadingScreen();
+function addLoadingScreen(game, skip) {
+    
+    loadingscreen = new JackDanger.LoadingScreen(game, skip);
     loadingscreen.add();
+    game.load.onFileComplete.removeAll();
+    game.load.onFileComplete.add(loadingscreen.update.bind(loadingscreen));
 }
 
 function removeLoadingScreen() {
@@ -50,7 +53,8 @@ function onVictory() {
 }
 
 function onLose() {
-    game.state.start(currentGameData.id);
+    console.log("onlose next: " + currentGameData.id);
+    game.state.start(currentGameData.id, true, false);
 }
 
 var JackDanger = {};

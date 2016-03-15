@@ -29,8 +29,10 @@ JackDanger.Preloader.prototype = {
     loadingAssets: function() {
         this.load.path = 'assets/';
         game.load.bitmapFont("testfont");
+        game.load.bitmapFont("bigYellow");
+        game.load.bitmapFont("white");
         //this.load.image("tiles");
-       //this.load.image("items");
+       this.load.image("loadingback");
        // this.load.atlas("atlas");
 
     }
