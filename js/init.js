@@ -1,8 +1,10 @@
+var JackDanger = {};
 var game = null;
 var games = [];
 var currentGameData = null;
 var finishedGames = [];
 function addMyGame(id, name, developerName, tutorialText, cursorText, jumpText, shootText, className) {
+    console.log("addmy game");
     games.push({
         id:id,
         name: name,
@@ -11,19 +13,33 @@ function addMyGame(id, name, developerName, tutorialText, cursorText, jumpText, 
         cursorText: cursorText,
         jumpText: jumpText,
         shootText: shootText,
-        className: className
+        className: className,
+        isTouched: false
     });
     
+    
+}
+JackDanger.isReload = false;
+
+JackDanger.reloadLevel = function() {
+    JackDanger.isReload = true;
+    game.state.start(currentGameData.id, true, false);
 }
 
 function startRandomGame() {
     var rndNr = Math.floor(Math.random() * games.length);
     currentGameData = games[rndNr];
     if (currentGameData == undefined) {
+        
             game.state.start("Gamefinished");
     } else {
+        if (currentGameData.isTouched == false) {
+            currentGameData.className.prototype.render = JackDanger.fakeRender(currentGameData.className.prototype.render);
+            currentGameData.isTouched = true;
+        }
         var id = currentGameData.id;
         finishedGames.push(games.splice(rndNr,1));
+        JackDanger.isReload = false;
         game.state.start(id, true, false);
     }
     
@@ -49,15 +65,18 @@ function loadUpdate(progress) {
 }
 
 function onVictory() {
-    startRandomGame();
+    console.log("snap");
+    JackDanger.snapShot = true;
+    JackDanger.isLosed = false;
 }
 
 function onLose() {
-    console.log("onlose next: " + currentGameData.id);
-    game.state.start(currentGameData.id, true, false);
+    console.log("snap");
+    JackDanger.snapShot = true;
+    JackDanger.isLosed = true;
 }
 
-var JackDanger = {};
+
 
 function init() {
     logInfo("init game");
@@ -70,6 +89,7 @@ function init() {
 
     game.state.add("Preloader", JackDanger.Preloader);
     game.state.add("Gamefinished", JackDanger.GameFinished);
+    game.state.add("OnLose", JackDanger.OnLose);
 
     game.state.start("Preloader");
 

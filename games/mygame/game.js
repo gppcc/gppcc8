@@ -31,17 +31,17 @@ JackDanger.MyGame = function() {
 };
 
 //hier musst du deine Eintragungen vornhemen.
-addMyGame("mygame", "My Game", "Spaßbringer08", "30 Sekunden ausweichen!", JackDanger.MyGame);
+addMyGame("mygame", "My Game", "Spaßbringer08", "30 Sekunden ausweichen!","Ausweichen","-","-", JackDanger.MyGame);
 
 
 JackDanger.MyGame.prototype.init = function() {
     logInfo("init Game");
-    addLoadingScreen(this);//nicht anfassen
+    addLoadingScreen(this,false);//nicht anfassen
 }
 
 JackDanger.MyGame.prototype.preload = function() {
-	this.load.path = 'games/' + currentGameData.id + '/assets/';//nicht anfassen
-	
+    this.load.path = 'games/' + currentGameData.id + '/assets/';//nicht anfassen
+    
     //füge hie rein was du alles laden musst.
     this.load.atlas("mygame");
 }
@@ -49,7 +49,11 @@ JackDanger.MyGame.prototype.preload = function() {
 //wird nach dem laden gestartet
 JackDanger.MyGame.prototype.create = function() {
     Pad.init();//nicht anfassen
-    removeLoadingScreen();//nicht anfassen
+}
+
+JackDanger.MyGame.prototype.mycreate = function() {
+    Pad.init();//nicht anfassen
+    //removeLoadingScreen();//nicht anfassen
 
     this.addStuff();
 }
@@ -78,7 +82,7 @@ JackDanger.MyGame.prototype.addStuff = function(dt) {
     this.ball.dir = {x: 1, y:1};
     this.ball.speed = 200;
 
-    this.timeText = game.add.bitmapText(game.width / 2, 20, "testfont", "", 30);
+    this.timeText = game.add.bitmapText(game.width / 2, 20, "white", "", 30);
     this.timeText.anchor.set(0.5);
 
     this.timeLeft = 10;
@@ -139,8 +143,12 @@ JackDanger.MyGame.prototype.collision = function() {
 }
 
 JackDanger.MyGame.prototype.bounding = function() {
-	if (this.player.x < 0) this.player.x = 0;
-	if (this.player.x > (this.game.width - this.player.width)) this.player.x = this.game.width - this.player.width;
-	if (this.player.y < 0) this.player.y = 0;
-	if (this.player.y > (this.game.height - this.player.height)) this.player.y = this.game.height - this.player.height;
+    if (this.player.x < 0) this.player.x = 0;
+    if (this.player.x > (this.game.width - this.player.width)) this.player.x = this.game.width - this.player.width;
+    if (this.player.y < 0) this.player.y = 0;
+    if (this.player.y > (this.game.height - this.player.height)) this.player.y = this.game.height - this.player.height;
+}
+
+JackDanger.MyGame.prototype.render = function() {
+    
 }

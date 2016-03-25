@@ -2,8 +2,14 @@ JackDanger.LoadingScreen = function(gameState, skip){
 	this.gameState = gameState;
 	this.skip = skip;
 
+	if (JackDanger.isReload) {
+		this.skip = true;
+		return;
+	}
+
 	this.hud = gameState.add.group();
 	this.hud.fixedToCamera = true;
+	gameState.world.setBounds(0,0,800,450);
 
 	this.back = gameState.add.sprite(0,0, "loadingback", null, this.hud);	
 	
@@ -27,6 +33,33 @@ JackDanger.LoadingScreen = function(gameState, skip){
 
 }
 
+JackDanger.snapShot = false;
+JackDanger.isLosed = false;
+
+JackDanger.fakeRender = function(render) {
+	var r = function() {
+		if (JackDanger.snapShot) {
+			console.log("taka a snap");
+			JackDanger.snapShot = false;
+			var dataURI = this.game.canvas.toDataURL();
+		    var data = new Image();
+		    data.src = dataURI;
+
+		    game.paused = true;
+
+		    data.onload=function(){
+		    	game.paused = false;
+            	game.cache.addImage('onlose', dataURI, data);
+	            game.state.start(JackDanger.isLosed ? 'OnLose' : 'Gamefinished', true, false);
+            }
+
+		}
+		render();
+	}
+
+	return r;
+}
+
 
 JackDanger.LoadingScreen.prototype = {
 	add: function() {
@@ -35,7 +68,7 @@ JackDanger.LoadingScreen.prototype = {
 	},
 
 	update: function(progress) {
-		this.loadingText.setText(progress.toFixed(0) + "%");
+		if (this.loadingText) this.loadingText.setText(progress.toFixed(0) + "%");
 		if (progress == 100) {
 			if (this.skip) {
 				this.remove();
@@ -56,7 +89,10 @@ JackDanger.LoadingScreen.prototype = {
 	},
 
 	remove: function() {
-		this.hud.destroy();
+		if (JackDanger.isReload == false) {
+			this.hud.destroy();
+		}
+		
 
 		for (var i = 0; i < this.updateId.length; i++) {
 			clearInterval(this.updateId[i]);

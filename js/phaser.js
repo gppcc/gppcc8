@@ -81456,7 +81456,6 @@ Phaser.Physics.Arcade.prototype = {
     * @return {boolean} True if there was a collision, otherwise false.
     */
     collideSpriteVsSprite: function (sprite1, sprite2, collideCallback, processCallback, callbackContext, overlapOnly) {
-
         if (!sprite1.body || !sprite2.body)
         {
             return false;
@@ -81498,7 +81497,7 @@ Phaser.Physics.Arcade.prototype = {
         var body;
 
         if (this.skipQuadTree || sprite.body.skipQuadTree)
-        {
+        {   
             for (var i = 0; i < group.hash.length; i++)
             {
                 //  Skip duff entries - we can't check a non-existent sprite or one with no body
